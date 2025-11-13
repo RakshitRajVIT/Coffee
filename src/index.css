@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Coffee-inspired color palette */
+    --background: 30 20% 96%;
+    --foreground: 25 35% 15%;
+
+    --card: 30 25% 98%;
+    --card-foreground: 25 35% 15%;
+
+    --popover: 30 25% 98%;
+    --popover-foreground: 25 35% 15%;
+
+    --primary: 25 50% 28%;
+    --primary-foreground: 30 20% 98%;
+
+    --secondary: 30 25% 90%;
+    --secondary-foreground: 25 50% 28%;
+
+    --muted: 30 15% 88%;
+    --muted-foreground: 25 20% 50%;
+
+    --accent: 25 60% 50%;
+    --accent-foreground: 30 20% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 30 20% 98%;
+
+    --border: 30 25% 88%;
+    --input: 30 25% 88%;
+    --ring: 25 50% 28%;
+
+    --radius: 0.75rem;
+    
+    /* Custom coffee-themed tokens */
+    --coffee-dark: 25 50% 20%;
+    --coffee-medium: 25 50% 35%;
+    --coffee-light: 30 40% 70%;
+    --cream: 30 30% 92%;
+    --caramel: 30 65% 55%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(30 30% 92%), hsl(30 40% 85%));
+    --gradient-card: linear-gradient(180deg, hsl(30 25% 98%), hsl(30 20% 95%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(25 50% 20% / 0.08);
+    --shadow-medium: 0 8px 30px hsl(25 50% 20% / 0.15);
+    --shadow-strong: 0 12px 40px hsl(25 50% 20% / 0.25);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 25 40% 8%;
+    --foreground: 30 20% 95%;
+
+    --card: 25 35% 12%;
+    --card-foreground: 30 20% 95%;
+
+    --popover: 25 35% 12%;
+    --popover-foreground: 30 20% 95%;
+
+    --primary: 30 60% 70%;
+    --primary-foreground: 25 40% 10%;
+
+    --secondary: 25 30% 18%;
+    --secondary-foreground: 30 20% 95%;
+
+    --muted: 25 30% 18%;
+    --muted-foreground: 30 15% 60%;
+
+    --accent: 30 70% 60%;
+    --accent-foreground: 25 40% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 30 20% 95%;
+
+    --border: 25 30% 20%;
+    --input: 25 30% 20%;
+    --ring: 30 60% 70%;
+    
+    --sidebar-background: 25 35% 10%;
+    --sidebar-foreground: 30 20% 95%;
+    --sidebar-primary: 30 60% 70%;
+    --sidebar-primary-foreground: 25 40% 10%;
+    --sidebar-accent: 25 30% 18%;
+    --sidebar-accent-foreground: 30 20% 95%;
+    --sidebar-border: 25 30% 20%;
+    --sidebar-ring: 30 60% 70%;
+    
+    --coffee-dark: 25 50% 15%;
+    --coffee-medium: 25 50% 30%;
+    --coffee-light: 30 40% 50%;
+    --cream: 30 20% 25%;
+    --caramel: 30 65% 45%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(25 40% 10%), hsl(25 35% 15%));
+    --gradient-card: linear-gradient(180deg, hsl(25 35% 12%), hsl(25 30% 10%));
+    
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 8px 30px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 12px 40px hsl(0 0% 0% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "kern";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
