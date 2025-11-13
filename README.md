@@ -33,7 +33,7 @@ As a B.Tech (CSE, AI/ML) student at VIT Bhopal, I believe a portfolio is not
        └─ images/  
 ```
 
-## Getting Started  
+## Getting Started  
 1. Clone the repo:  
    ```bash  
    git clone https://github.com/RakshitRajVIT/rynshitco.git  
@@ -53,21 +53,21 @@ As a B.Tech (CSE, AI/ML) student at VIT Bhopal, I believe a portfolio is not
    ```  
 5. Deploy to Netlify or any preferred host.
 
-## What I Demonstrated  
+## What I Demonstrated  
 - Front‑End Development Skills  
 - Clean Code / Semantic Structure  
 - Self‑Driven Learning  
 - Professional Presentation  
 
-## Next Steps / Roadmap  
+## Next Steps / Roadmap  
 - Add **blog** section  
 - Integrate **dark mode**  
 - Optimize **performance** (lazy loading, minification)  
 - Expand **Projects** section  
 - Add **contact form backend**
 
-## Contact Me  
-- Email: `rakshit.raj@example.com`  
+## Contact Me  
+- Email: `rakshitraj2323@gmail.com`  
 - GitHub: [github.com/RakshitRajVIT](https://github.com/RakshitRajVIT)  
 - LinkedIn: [linkedin.com/in/rakshitrajvit](https://linkedin.com/in/rakshitrajvit)  
 
